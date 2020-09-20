@@ -44,6 +44,21 @@ export default class Calus {
         }
     }
 
+    totaldiff = (...variable) => {
+        try {
+            let h = this.h;
+            let df = 0;
+
+            for (let i=0; i<variable.length; i++) df += this.partdiff(i, ...variable) * h;
+
+            return df;
+
+        } catch (TypeError) {
+            console.error('Function does not exist: please, execute set_f.');
+            return false;
+        }
+    }
+
     integrate = (from_x=null, to_x=null, dx=1e-6) => {
         let stack = 0;
         

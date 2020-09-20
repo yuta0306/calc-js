@@ -19,3 +19,4 @@ console.log(part_cls.f(1, 1))
 
 // sample execution
 console.log(part_cls.partdiff(0, 1, 1));
+console.log(part_cls.totaldiff(1, 1));
