@@ -1,4 +1,4 @@
-class Calus {
+export default class Calus {
     constructor(f=null) {
         this.f = f;
     }
@@ -9,7 +9,8 @@ class Calus {
 
     grad = (x=0, h=1e-6) => {
         try {
-            f = this.f;
+            let f = this.f;
+
             return (f(x+h) - f(x-h) / 2*h);
         } catch (TypeError) {
             console.error('Function does not exist: please, execute set_f.');
@@ -27,7 +28,8 @@ class Calus {
         }
 
         try {
-            f = this.f;
+            let f = this.f;
+
             for (let i=from_x; i<to_x; i+=dx) stack +=f(i)*dx;
 
             return stack;
@@ -37,14 +39,3 @@ class Calus {
         }
     }
 }
-
-// Declare the function
-let f = x => x**2;
-
-// Generate Numjs instance
-let numjs = new Calus(f);
-
-// sample execution
-console.log(numjs.grad(1));
-
-console.log(numjs.integrate(0, 1))
