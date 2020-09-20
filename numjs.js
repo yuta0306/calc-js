@@ -1,4 +1,4 @@
-class Numjs {
+class Calus {
     constructor(f=null) {
         this.f = f;
     }
@@ -42,7 +42,7 @@ class Numjs {
 let f = x => x**2;
 
 // Generate Numjs instance
-let numjs = new Numjs(f);
+let numjs = new Calus(f);
 
 // sample execution
 console.log(numjs.grad(1));
