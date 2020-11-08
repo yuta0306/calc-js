@@ -10,7 +10,7 @@ def git_flow():
     )
     print(res)
     res = subprocess.run(
-        ['git', 'push', ' ']
+        ['git', 'push', 'https://github.com/yuta0306/calc-js.git']
     )
 
 if __name__ == "__main__":
